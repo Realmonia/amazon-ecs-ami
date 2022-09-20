@@ -150,3 +150,21 @@ variable "ecs_init_local_override" {
   description = "Specify a local init rpm under /additional-packages to be used for building AL2 and AL2022 AMIs. If empty it will use ecs_init_url if specified, otherwise the standard path"
   default     = ""
 }
+
+variable "ami_users" {
+  type        = []string
+  description = "A list of account IDs that have access to launch the resulting AMI(s)"
+  default     = []
+}
+
+variable "ami_org_arns" {
+  type        = []string
+  description = "A list of Amazon Resource Names (ARN) of AWS Organizations that have access to launch the resulting AMI(s)"
+  default     = []
+}
+
+variable "ami_ou_arns" {
+  type        = []string
+  description = "A list of Amazon Resource Names (ARN) of AWS Organizations organizational units (OU) that have access to launch the resulting AMI(s)"
+  default     = []
+}

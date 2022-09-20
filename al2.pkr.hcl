@@ -29,6 +29,9 @@ source "amazon-ebs" "al2" {
     ami_type            = "al2"
     ami_version         = "2.0.${var.ami_version}"
   }
+  ami_users = "${var.ami_users}"
+  ami_org_arns = "${var.ami_org_arns}"
+  ami_ou_arns = "${var.ami_ou_arns}"
 }
 
 build {
